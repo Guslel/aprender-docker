@@ -1,0 +1,17 @@
+# Versão do Docker Compose
+version: '3.8'
+
+# Nossos serviços (contêineres)
+services:
+  # Nome do nosso serviço (pode ser qualquer nome)
+  app:
+    # Diz ao compose para construir a imagem a partir do Dockerfile
+    # que está no diretório atual (.)
+    build: .
+    # Nome da imagem que será construída
+    image: aprender-docker-compose
+    # Mapeamento de portas (HOST:CONTAINER)
+    ports:
+      - "3000:3000"
+    # Nome do contêiner (opcional, mas bom para organizar)
+    container_name: meu-app-node
